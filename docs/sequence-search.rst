@@ -16,9 +16,9 @@ provides a search against a catalogue of predicted peptides.
 **Figure 1**. The landing page of the sequence search tool
 
 These sequences comprise a non-redundant set of proteins predicted from contigs that
-have been assembled from sequencing runs. The HMMER search
+have been assembled from metagenomic sequencing runs. The HMMER search
 engine has been adapted to provide fast searches against this database.
-The results can be linked back to the sample and run from which the peptide was derived
+The results can be linked back to the sample or run from which the peptide was derived
 and also to sequences with an exact match in the UniProt database.
 
 The search takes a FASTA-formatted amino acid sequence.
@@ -30,7 +30,8 @@ The search takes a FASTA-formatted amino acid sequence.
 
 You can search against all of the sequences in the database ('All'),
 or restrict your search to full length sequences or partial
-sequences only (see :ref:`Partial and full length peptides`).
+sequences only (see :ref:`Partial and full length peptides`). Searches can also be 
+limited to sequences derived from particular environments/biomes.
 
 .. figure:: images/sequence_search_db_select.png
    :scale: 50 %
@@ -43,7 +44,7 @@ Result page
 -----------
 
 On completion, a list of matching sequences is shown in order of E-value significance.
-Since identical peptides could be derived from different samples and runs, we use a
+Since identical peptides can be derived from different samples and runs, we use a
 unique hash sum (SHA256) as the sequence identifier. The mapping to UniProt identifiers
 and MGnify run/sample accessions can be switched on by selecting ‘Customise’
 on the results page and checking the appropriate boxes.
@@ -53,10 +54,8 @@ on the results page and checking the appropriate boxes.
 
 **Figure 4**. Different features on the result page after triggering a sequence search
 
-At this time, it is not possible to link directly to the
-matching sequence from the results table. However, in the download
-tab, the 'Full length FASTA’ link will provide all the matching
-sequences. Alternatively, the sequences are available on our FTP server (ftp://ftp.ebi.ac.uk/pub/databases/metagenomics/peptide_database).
+Clicking on the sequence accession will link directly to the
+matching sequence. The sequences are also available on our FTP server (ftp://ftp.ebi.ac.uk/pub/databases/metagenomics/peptide_database).
 
 -------------
 Build process
@@ -112,7 +111,7 @@ Availability
 
 As well as searches via a web server, we
 provide all data for download from our FTP server (ftp://ftp.ebi.ac.uk/pub/databases/metagenomics/peptide_database).
-This includes the sequence database, run, sample, UniProtKB/SwissProt and UniProtKB/TrEMBL mappings,
+This includes the sequence database, run or sample, UniProtKB/SwissProt and UniProtKB/TrEMBL mappings,
 Pfam architectures, and counts of the number of times each sequences
 was observed in the database as a whole.
 
